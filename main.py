@@ -18,4 +18,4 @@ def on_ready():
 def on_message(message):
     yield from test.test(client, message)
 
-client.run("Mzc1MzU3MDUyOTIwMzk3ODM3.DNvZ2Q.kJ121b9i0LgIoWacXxIS3AF3FUg")
+client.run(BOT_TOKEN)
