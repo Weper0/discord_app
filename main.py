@@ -18,4 +18,7 @@ def on_ready():
 def on_message(message):
     yield from test.test(client, message)
 
+
 client.run(BOT_TOKEN)
+
+
