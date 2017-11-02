@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import os
 from commands import test
 
 client = discord.Client()
@@ -19,4 +20,4 @@ def on_message(message):
     yield from test.test(client, message)
 
 
-client.run(BOT_TOKEN)
+client.run(os.environ.get('BOT_TOKEN'))
