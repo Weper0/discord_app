@@ -2,6 +2,7 @@ import discord
 import asyncio
 import os
 from commands import test
+from commands import iplookup
 
 client = discord.Client()
 
@@ -18,6 +19,7 @@ def on_ready():
 @asyncio.coroutine
 def on_message(message):
     yield from test.test(client, message)
+    yield from iplookup.iplookup(client, message)
 
 
 client.run(os.environ.get('BOT_TOKEN'))

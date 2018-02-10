@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 cmd = "iplookup"
 
-def test(client, message):
+def iplookup(client, message):
     if message.content.startswith(_variables.prefix + cmd + ' '):
         user_message = str(message.content).replace(_variables.prefix + cmd + ' ', '')
 
